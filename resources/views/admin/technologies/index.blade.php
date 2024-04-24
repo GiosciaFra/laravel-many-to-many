@@ -32,7 +32,7 @@
 
     <a href="{{route('admin.technologies.create')}}" class="btn btn-primary me-3">Aggiungi una tecnologia!</a>
     <a href="{{route('admin.projects.index')}}" class="btn btn-info me-3">Vai ai miei progetti</a>
-    <a href="{{route('admin.types.index')}}" class="btn btn-light ">Vai alle mie tipologie di progetti</a>
+    <a href="{{route('admin.types.index')}}" class="btn btn-light  ">Vai alle mie tipologie di progetti</a>
 
 
 
