@@ -23,7 +23,6 @@ class StoreProjectRequest extends FormRequest
     {
         return [
             'name' => 'required|max:255',
-            'used_technologies' => 'required|max:5000',
             'url' => 'required|max:5000',
             'description' => 'required|max:5000',
             'img' =>  'file|max:1024|nullable|mimes:jpg,bmp,png',
@@ -36,8 +35,6 @@ class StoreProjectRequest extends FormRequest
         return [
             'name.required' => 'Il progetto deve avere un nome.',
             'name.max' => 'Puoi inserire :max caratteri',
-            'used_technologies.required' => 'Devi specificare le tecnologie utilizzate.',
-            'used_technologies.max' => 'Puoi inserire massimo :max caratteri',
             'url.required' => 'Collega un link alla tua repo.',
             'url.max' => "l'url può avere massimo :max caratteri",
             'description.required' => 'Inserisci una breve descrizione del progetto.',

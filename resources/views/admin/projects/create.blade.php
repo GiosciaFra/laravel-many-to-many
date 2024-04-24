@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container  py-5">
-    <h1 class="text-center">Aggiungi un fumetto</h1>
+    <h1 class="text-center">Aggiungi un progetto</h1>
 
     <form action="{{route('admin.projects.store')}}" method="POST" enctype="multipart/form-data" class="d-flex flex-column gap-4 " >
         @csrf
@@ -58,6 +58,27 @@
             </select>
         </div>
 
+        <div>
+            <label for="type_id">Tecnologie</label>
+
+            <div class="d-flex gap-4">
+                @foreach ($technologies as $technology)
+
+                    <div class="form-check">
+                        <input
+                        type="checkbox" 
+                        name="technologies[]" 
+                        value="{{$technology->id}}" 
+                        id="technology-{{$technology->id}}" 
+                        class="form-check-input"
+                        {{ in_array($technology->id, old('technologies', [])) ? 'checked' : '' }}
+                        >
+                        <label class="form-check-label">{{$technology->name}}</label>
+                    </div>
+                    
+                @endforeach
+            </div>
+        </div>
 
         <div class="d-flex gap-5 justify-content-center  ">
             <button type="submit" class="btn btn-outline-success mt-4 ">Aggiungi Progetto</button>
