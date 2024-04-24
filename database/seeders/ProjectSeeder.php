@@ -18,7 +18,6 @@ class ProjectSeeder extends Seeder
                 'name' => 'Ciao',
                 'description' => 'lorem ipsum',
                 'img' => 'https://picsum.photos/200',
-                'used_technologies' => 'html,css,js',
                 'url' => 'https://github.com/GiosciaFra?tab=repositories',
             ],
         ];
@@ -30,7 +29,6 @@ class ProjectSeeder extends Seeder
             $newProject->name = $project['name'];
             $newProject->description = $project['description'];
             $newProject->img = $project['img'];
-            $newProject->used_technologies = $project['used_technologies'];
             $newProject->url = $project['url'];
 
             $newProject->save();

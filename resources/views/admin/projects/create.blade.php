@@ -39,16 +39,6 @@
         </div>
 
         <div>
-            <label for="used_technologies" class="form-label">Tecnologie utilizzate</label>
-            <input type="text" class="form-control @error('used_technologies') is-invalid @enderror" id="used_technologies" name="used_technologies" value="{{old('used_technologies')}}" >
-            @error('used_technologies')
-            <div class="invalid-feedback">
-                {{$message}}
-            </div>
-            @enderror
-        </div>
-
-        <div>
             <label for="url" class="form-label">Link repo</label>
             <input type="text" class="form-control @error('url') is-invalid @enderror" id="url" name="url" value="{{old('url')}}">
             @error('url')
