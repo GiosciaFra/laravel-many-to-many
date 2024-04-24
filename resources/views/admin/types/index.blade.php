@@ -30,6 +30,9 @@
         </tbody>
     </table>
 
-    <a href="{{route('admin.types.create')}}" class="btn btn-primary">Aggiungi una tipologia!</a>
+    <a href="{{route('admin.types.create')}}" class="btn btn-primary me-3 ">Aggiungi una tipologia!</a>
+    <a href="{{route('admin.technologies.index')}}" class="btn btn-light me-3">Vai alle mie tecnologie</a>
+
+    <a href="{{route('admin.projects.index')}}" class="btn btn-info ">Vai ai miei progetti</a>
 </div>
 @endsection

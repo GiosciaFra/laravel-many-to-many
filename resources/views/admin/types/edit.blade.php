@@ -6,7 +6,7 @@
     
     <h1 class="text-center">Modifica la tipologia</h1>
 
-    <form action="{{route('admin.types.update', $type->id)}}" method="POST">
+    <form action="{{route('admin.types.update', $type->id)}}" method="POST" class="d-flex flex-column gap-4 ">
         @csrf
         @method('PUT')
 

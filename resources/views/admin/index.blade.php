@@ -10,6 +10,8 @@
             
             <a href="{{route('admin.projects.index')}}" class="btn btn-outline-info p-3 ">Vai ai miei progetti</a>
             <a href="{{route('admin.types.index')}}" class="btn btn-outline-primary p-3 ">Vai alle mie tipologie di progetti</a>
+            <a href="{{route('admin.technologies.index')}}" class="btn btn-outline-light p-3 ">Vai alle mie tecnologie</a>
+
 
         </div>
     </div>
