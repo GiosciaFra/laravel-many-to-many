@@ -10,6 +10,11 @@
     
     <p><strong>Descrizione: </strong>{{$project->description}}</p>
     <p><strong>Tipo di progetto: </strong>{{$project->type?->name}}</p>
+    <p><strong>Link repo:</strong><a href="{{$project->url}}"></a></p>
+    @foreach ($project->$technologies as $technology)
+        
+    <p class="d-flex gap-3 badge rounded-pill" style="background-color: {{$technology->color ?? 'white'}}"><strong>Tecnologie:</strong>{{$technology->name}}</p>
+    @endforeach
 
     <div class="d-flex justify-content-center gap-5 pt-5">
 

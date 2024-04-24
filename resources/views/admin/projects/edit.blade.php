@@ -63,6 +63,39 @@
             </select>
         </div>
 
+        <div>
+            <label for="type_id">Tecnologie</label>
+
+            <div class="d-flex gap-4">
+                @foreach ($technologies as $technology)
+
+                    <div class="form-check">
+
+                        <input
+                        type="checkbox" 
+                        name="technologies[]" 
+                        value="{{$technology->id}}" 
+                        id="technology-{{$technology->id}}" 
+                        class="form-check-input"
+
+                        @if($errors->any())
+
+                            {{ in_array($technology->id, old('technologies', [])) ? 'checked' : '' }}
+
+                            @else 
+                            
+                            {{ $project->technologies->contains($technology) ? 'checked' : '' }}
+
+                        @endif
+
+                        >
+                        <label class="form-check-label">{{$technology->name}}</label>
+                    </div>
+                    
+                @endforeach
+            </div>
+        </div>
+
 
 
         <div class="d-flex gap-5 justify-content-center mt-4 ">
