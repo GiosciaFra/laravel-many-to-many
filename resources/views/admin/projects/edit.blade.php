@@ -5,7 +5,7 @@
 <div class="container py-5">
     <h1 class="text-center">Modifica il progetto </h1>
 
-    <form action="{{route('admin.projects.update', $project->id)}}" method="POST" class="d-flex flex-column gap-4 " >
+    <form action="{{route('admin.projects.update', $project->id)}}" method="POST" class="d-flex flex-column gap-4 " enctype="multipart/form-data" >
         @csrf
         @method('PUT')
 
@@ -30,16 +30,6 @@
             @enderror
         </div>
 
-        <div>
-            <label for="img" class="form-label">Aggiungi una URL per inserire la copertina</label>
-            <input type="text" class="form-control @error('img') is-invalid @enderror" id="img" name="img" value='{{$project->img}}'>
-             @error('img')
-                <div class="invalid-feedback">
-                    {{$message}}
-                </div>
-            @enderror
-        </div>
-
 
         <div>
             <label for="url" class="form-label">Link repo</label>
@@ -48,6 +38,16 @@
                 <div class="invalid-feedback">
                     {{$message}}
                 </div>
+            @enderror
+        </div>
+
+        <div>
+            <label for="img" class="form-label">Aggiungi un'immagine di copertina  </label>
+            <input type="file" class="form-control @error('img') is-invalid @enderror" id="img" name="img">
+            @error('img')
+            <div class="invalid-feedback">
+                {{$message}}
+            </div>
             @enderror
         </div>
 

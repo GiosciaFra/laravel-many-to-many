@@ -26,7 +26,8 @@ class StoreProjectRequest extends FormRequest
             'url' => 'required|max:5000',
             'description' => 'required|max:5000',
             'img' =>  'file|max:1024|nullable|mimes:jpg,bmp,png',
-            'type_id' => 'nullable|exists:types,id'
+            'type_id' => 'nullable|exists:types,id',
+            'technologies' => 'nullable|exists:technologies,id'
         ];
     }
 

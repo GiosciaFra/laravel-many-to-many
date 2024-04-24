@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container py-5 d-flex flex-column justify-content-center w-50 ">
+<div class="container py-5 d-flex flex-column justify-content-center align-items-center  ">
     <h1 class="text-center pb-4">{{$project->name}}</h1>
 
     <div class="mb-4 text-center">
